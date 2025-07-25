@@ -103,3 +103,80 @@ header img{
 }
 /*Texto Sobre mim no centro*/
 /*-------------------------------------------------------------------------------------*/
+
+
+.audio-container {
+  text-align: center;
+}
+
+#audio {
+  display: none; /* Oculta o player nativo */
+}
+
+#playPauseBtn {
+  padding: 10px 10px;
+  font-size: 16px;
+  background-color: #222;
+  color: white;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 80px;
+}
+
+#playPauseBtn:hover {
+  background-color: #333;
+}
+
+
+/*-------------------------------------------------------------------------------------*/
+
+/* Responsivo para celulares */
+@media screen and (max-width: 768px) {
+  ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  header img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .title {
+    font-size: 1.5em;
+  }
+
+  .heart-decoration {
+    font-size: 1.5em;
+  }
+
+  .conteudo-centralizado,
+  .raposa {
+    margin-top: 30px;
+    padding: 0 15px;
+  }
+
+  #playPauseBtn {
+    font-size: 14px;
+    padding: 8px 8px;
+    margin-top: 40px;
+  }
+}
+
+
+/* Responsivo para celulares pequenos até 480px */
+
+@media screen and (max-width: 480px) {
+  .title,
+  .heart-decoration {
+    font-size: 1.2em;
+  }
+
+  #playPauseBtn {
+    font-size: 12px;
+    padding: 6px 6px;
+  }
+}

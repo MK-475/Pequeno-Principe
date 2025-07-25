@@ -29,7 +29,7 @@ body::before {
   background-image: url("imag/background_preto.jpg"); /* imagem sobreposta */
   background-size: cover;
   background-position: center;
-  opacity: 0.3;
+  opacity: 0.5;
   z-index: 0;
   pointer-events: none;
 }
@@ -73,8 +73,8 @@ header img{
   margin: 30px auto;
   text-align: justify;
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-  line-height: 1.6;
+  box-shadow: 0 0 5px rgba(255, 253, 253, 0.50);
+  line-height: 1.5;
   font-size: 1.2em;
 }
 
@@ -83,4 +83,49 @@ header img{
   color: white;
   margin-bottom: 20px;
   font-size: 1.3em;
+}
+
+
+@media screen and (max-width: 768px) {
+  header img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .title-2 {
+    font-size: 1em;
+    padding: 0 10px;
+  }
+
+  .mensagem {
+    padding: 20px;
+    margin: 20px 15px;
+    font-size: 1em;
+  }
+
+  .mensagem h3 {
+    font-size: 1.1em;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  header img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .title-2 {
+    font-size: 0.95em;
+  }
+
+  .mensagem {
+    padding: 15px;
+    margin: 15px 10px;
+    font-size: 0.95em;
+  }
+
+  .mensagem h3 {
+    font-size: 1em;
+  }
 }

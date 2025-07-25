@@ -70,8 +70,8 @@ body::before {
   margin: 30px auto;
   text-align: justify;
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-  line-height: 1.8;
+  box-shadow: 0 0 5px rgba(255, 253, 253, 0.50);
+  line-height: 1.5;
   font-size: 1.2em;
 }
 
@@ -79,4 +79,56 @@ body::before {
   text-align: center;
   color: #ffb6c1;
   margin-bottom: 20px;
+}
+
+/*-------------------------------------------------------------------------------------*/
+
+/* Responsivo para celulares */
+
+@media screen and (max-width: 768px) {
+  .meio img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .rosa h3 {
+    font-size: 1.2em;
+  }
+
+  .rosa p {
+    font-size: 1em;
+    padding: 0 10px;
+  }
+
+  .texto-rosa {
+    padding: 20px;
+    margin: 20px 15px;
+    font-size: 1em;
+  }
+
+  .texto-rosa h2 {
+    font-size: 1.4em;
+  }
+}
+
+/* Responsivo para celulares pequenos até 480px */
+@media screen and (max-width: 480px) {
+  .meio img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .rosa h3 {
+    font-size: 1em;
+  }
+
+  .texto-rosa {
+    padding: 15px;
+    margin: 15px 10px;
+    font-size: 0.95em;
+  }
+
+  .texto-rosa h2 {
+    font-size: 1.2em;
+  }
 }
