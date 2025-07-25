@@ -86,15 +86,13 @@ header img{
 }
 
 
+/*-------------------------------------------------------------------------------------*/
+/* RESPONSIVO - CELULARES (até 768px) */
+
 @media screen and (max-width: 768px) {
   header img {
     width: 100px;
     height: 100px;
-  }
-
-  .title-2 {
-    font-size: 1em;
-    padding: 0 10px;
   }
 
   .mensagem {
@@ -106,17 +104,18 @@ header img{
   .mensagem h3 {
     font-size: 1.1em;
   }
+
+  .title-2 {
+    font-size: 1em;
+  }
 }
 
+/* RESPONSIVO - CELULARES PEQUENOS (até 480px) */
 
 @media screen and (max-width: 480px) {
   header img {
     width: 80px;
     height: 80px;
-  }
-
-  .title-2 {
-    font-size: 0.95em;
   }
 
   .mensagem {
@@ -127,5 +126,9 @@ header img{
 
   .mensagem h3 {
     font-size: 1em;
+  }
+
+  .title-2 {
+    font-size: 0.95em;
   }
 }

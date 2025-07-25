@@ -65,6 +65,9 @@ body::before {
 
 /*-------------------------------------------------------------------------------------*/
 
+/*-------------------------------------------------------------------------------------*/
+/* RESPONSIVO - CELULARES (até 768px) */
+
 @media screen and (max-width: 768px) {
   .meio_2 img {
     width: 100px;
@@ -78,10 +81,11 @@ body::before {
   }
 
   .texto-gnominho h2 {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 }
 
+/* RESPONSIVO - CELULARES PEQUENOS (até 480px) */
 
 @media screen and (max-width: 480px) {
   .meio_2 img {
@@ -96,6 +100,6 @@ body::before {
   }
 
   .texto-gnominho h2 {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 }
