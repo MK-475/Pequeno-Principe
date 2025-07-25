@@ -1,5 +1,8 @@
+/*-------------------------------------------------------------------------------------
+  CONFIGURAÇÕES GERAIS
+-------------------------------------------------------------------------------------*/
 html, body {
-  height: 100%; /* Garante que o body e html ocupem 100% da altura */
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -8,22 +11,21 @@ body {
   position: relative;
   color: white;
   font-family: 'Times New Roman', Times, serif;
-  background-image: url("imag/raposa_pequeno_principe.jpeg"); /* fundo base */
+  background-image: url("imag/raposa_pequeno_principe.jpeg");
   background-size: cover;
   background-position: center;
-  min-height: 100vh; /* Garante altura total da tela */
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
 body::before {
   content: "";
-  position: fixed; /*importante para cobrir toda a tela mesmo com scroll */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-
-  background-image: url("imag/background_preto.jpg"); /* imagem sobreposta */
+  background-image: url("imag/background_preto.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.3;
@@ -36,9 +38,9 @@ body::before {
   z-index: 1;
 }
 
-
-/*-------------------------------------------------------------------------------------*/
-/*Texto dos cantos superiores*/
+/*-------------------------------------------------------------------------------------
+  MENU SUPERIOR (NAVEGAÇÃO)
+-------------------------------------------------------------------------------------*/
 ul {
   display: flex;
   justify-content: space-between;
@@ -51,25 +53,23 @@ a {
   color: #333;
   text-decoration: none;
 }
-/*Texto dos cantos superiores*/
-/*-------------------------------------------------------------------------------------*/
 
-
-header img{
+/*-------------------------------------------------------------------------------------
+  CABEÇALHO (IMAGEM + TÍTULO)
+-------------------------------------------------------------------------------------*/
+header img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   border: 3px solid #333;
 }
 
-/*-------------------------------------------------------------------------------------*/
-/*Para centralizar o texto do meio*/
 .center {
   text-align: center;
 }
 
 .conteudo-centralizado {
-  text-align: center; /* Centraliza texto, imagem e emojis */
+  text-align: center;
   margin-top: 50px;
 }
 
@@ -82,29 +82,27 @@ header img{
   font-size: 2em;
   margin-top: 10px;
 }
-/*Para centralizar o texto do meio*/
-/*-------------------------------------------------------------------------------------*/
 
-
-/*-------------------------------------------------------------------------------------*/
-/*Texto RAPOSA centro*/
+/*-------------------------------------------------------------------------------------
+  SEÇÃO DE TEXTO "RAPOSA"
+-------------------------------------------------------------------------------------*/
 .raposa {
   color: white;
-  text-align: center;        /* Centraliza tudo dentro da section */
-  margin-top: 50px;          /* Empurra a section pra baixo */
+  text-align: center;
+  margin-top: 50px;
 }
 
 .raposa h3 {
-  margin-bottom: 5px;        /* Diminui o espaço entre o título e o parágrafo */
+  margin-bottom: 5px;
 }
 
 .raposa p {
-  margin-top: 0;             /* Remove espaço extra acima do parágrafo */
+  margin-top: 0;
 }
-/*Texto Sobre mim no centro*/
-/*-------------------------------------------------------------------------------------*/
 
-
+/*-------------------------------------------------------------------------------------
+  PLAYER DE ÁUDIO
+-------------------------------------------------------------------------------------*/
 .audio-container {
   text-align: center;
 }
@@ -129,10 +127,11 @@ header img{
   background-color: #333;
 }
 
+/*-------------------------------------------------------------------------------------
+  RESPONSIVIDADE
+-------------------------------------------------------------------------------------*/
 
-/*-------------------------------------------------------------------------------------*/
-
-/* Responsivo para celulares */
+/* Telas até 768px (tablets e celulares) */
 @media screen and (max-width: 768px) {
   ul {
     flex-direction: column;
@@ -158,17 +157,9 @@ header img{
     margin-top: 30px;
     padding: 0 15px;
   }
-
-  #playPauseBtn {
-    font-size: 14px;
-    padding: 8px 8px;
-    margin-top: 40px;
-  }
 }
 
-
-/* Responsivo para celulares pequenos até 480px */
-
+/* Telas até 480px (celulares pequenos) */
 @media screen and (max-width: 480px) {
   .title,
   .heart-decoration {
