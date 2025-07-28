@@ -139,3 +139,30 @@ header img {
     font-size: 1.2em;
   }
 }
+
+/*-------------------------------------------------------------------------------------
+  PLAYER DE ÁUDIO
+-------------------------------------------------------------------------------------*/
+.audio-container {
+  text-align: center;
+}
+
+#audio {
+  display: none; /* Oculta o player nativo */
+}
+
+#playPauseBtn {
+  padding: 10px 10px;
+  font-size: 16px;
+  background-color: #222;
+  color: white;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 70px;
+}
+
+#playPauseBtn:hover {
+  background-color: #333;
+}
