@@ -69,18 +69,14 @@ body > * {
 
 /* CARD ESCURO IGUAL AO PRINT */
 
-.texto-raposa {
-  max-width: 850px;   /* aumentamos */
-  width: 90%;         /* ocupa mais da tela */
-  margin: 60px auto;  /* mais espaço acima/abaixo */
-  padding: 45px 40px; /* aumenta área interna */
-
-  color: #fff;
+.texto-raposa{
+  max-width: 700px;
+  padding: 30px;
+  margin: 40px auto;
   text-align: justify;
-  line-height: 1.8;
-  font-size: 1.2em;
-
-  border-radius: 30px;
+  border-radius: 20px;
+  line-height: 1.6;
+  font-size: 1.15em;
 
   /* efeito vidro */
   background: rgba(0,0,0,0.35);
@@ -91,27 +87,13 @@ body > * {
   animation: fadeIn 1.2s ease;
 }
 
-
 /* TÍTULO DENTRO DO CARD */
 
 .texto-raposa h2 {
   text-align: center;
-  font-size: 2em;
-  margin-bottom: 25px;
-  letter-spacing: 1px; 
+  margin-bottom: 20px;
 }
 
-/* PARÁGRAFOS */
-
-.texto-raposa p {
-  margin-bottom: 18px;
-}
-
-/* ITÁLICO MAIS SUAVE */
-
-.texto-raposa em {
-  opacity: 0.9;
-}
 
 
 
