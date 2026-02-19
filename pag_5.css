@@ -1,74 +1,102 @@
+/* RESET BASE */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 body {
-  position: relative;
   color: white;
-  font-family: 'Times New Roman', Times, serif;
-  background-image: url("imag/flower_1.jpeg"); /* fundo base */
+  font-family: Georgia, serif;
+  background-image: url("imag/imag_8.jpeg");
   background-size: cover;
   background-position: center;
-  min-height: 110vh; /* Garante altura total da tela */
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
+/* camada escura sobre o fundo */
 body::before {
   content: "";
-  position: fixed; /*importante para cobrir toda a tela mesmo com scroll */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  background-image: url("imag/background_preto.jpg"); /* imagem sobreposta */
+  position: fixed;
+  inset: 0;
+  background-image: url("imag/background_preto.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.5;
   z-index: 0;
-  pointer-events: none;
 }
 
-* {
+/* garante conteúdo acima do overlay */
+body > * {
   position: relative;
   z-index: 1;
 }
 
-/*-------------------------------------------------------------------------------------*/
+/* IMAGEM */
 
-/* Centraliza imagem */
 .meio_2 {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .meio_2 img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid #333;
+  border: 3px solid white;
 }
 
-/* Estilo do bloco de texto */
+/* BLOCO DE TEXTO */
+
 .texto-gnominho {
   max-width: 700px;
   padding: 30px;
-  margin: 30px auto;
+  margin: 40px auto;
   text-align: justify;
   border-radius: 20px;
-  box-shadow: 0 0 5px rgba(255, 253, 253, 0.50);
   line-height: 1.8;
-  font-size: 1.2em;
+  font-size: 1.15em;
+
+  /* efeito vidro moderno */
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+
+  box-shadow: 0 0 18px rgba(255,255,255,0.25);
+
+  animation: fadeIn 1.2s ease;
 }
 
 .texto-gnominho h2 {
   text-align: center;
-  color: rgb(255, 193, 193);
+  color: rgb(255, 255, 255);
   margin-bottom: 20px;
 }
 
-/*-------------------------------------------------------------------------------------*/
+/* ÁUDIO */
 
-/*-------------------------------------------------------------------------------------*/
-/* RESPONSIVO - CELULARES (até 768px) */
+audio {
+  display: block;
+  margin: 25px auto 40px;
+}
 
-@media screen and (max-width: 768px) {
+/* ANIMAÇÃO SUAVE */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
   .meio_2 img {
     width: 100px;
     height: 100px;
@@ -76,18 +104,12 @@ body::before {
 
   .texto-gnominho {
     padding: 20px;
-    margin: 20px 15px;
+    margin: 25px 15px;
     font-size: 1em;
-  }
-
-  .texto-gnominho h2 {
-    font-size: 1.2em;
   }
 }
 
-/* RESPONSIVO - CELULARES PEQUENOS (até 480px) */
-
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .meio_2 img {
     width: 80px;
     height: 80px;
@@ -95,11 +117,7 @@ body::before {
 
   .texto-gnominho {
     padding: 15px;
-    margin: 15px 10px;
+    margin: 20px 10px;
     font-size: 0.95em;
-  }
-
-  .texto-gnominho h2 {
-    font-size: 1em;
   }
 }
