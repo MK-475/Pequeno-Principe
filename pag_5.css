@@ -48,9 +48,9 @@ body > * {
   border: 3px solid rgba(255,255,255,0.7);
 }
 
-/* BLOCO PRINCIPAL (CARD) */
+/* CARD PRINCIPAL */
 
-.texto-raposa{
+.texto-raposa {
   max-width: 700px;
   padding: 30px;
   margin: 40px auto;
@@ -59,7 +59,7 @@ body > * {
   line-height: 1.6;
   font-size: 1.15em;
 
-  /* efeito vidro */
+  /* efeito vidro igual ao outro */
   background: rgba(0,0,0,0.35);
   backdrop-filter: blur(6px);
 
@@ -68,13 +68,22 @@ body > * {
   animation: fadeIn 1.2s ease;
 }
 
-/* TÍTULO DENTRO DO CARD */
+/* TÍTULO */
 
 .texto-raposa h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
+/* parágrafos */
+.texto-raposa p {
+  margin-bottom: 16px;
+}
+
+/* itálico suave */
+.texto-raposa em {
+  opacity: 0.9;
+}
 
 /* ÁUDIO */
 
@@ -99,12 +108,12 @@ audio {
 /* RESPONSIVO */
 
 @media (max-width: 768px) {
-  .center img {
+  .meio_2 img {
     width: 100px;
     height: 100px;
   }
 
-  .texto-rosa {
+  .texto-raposa {
     padding: 20px;
     margin: 25px 15px;
     font-size: 1em;
@@ -112,12 +121,12 @@ audio {
 }
 
 @media (max-width: 480px) {
-  .center img {
+  .meio_2 img {
     width: 80px;
     height: 80px;
   }
 
-  .texto-rosa {
+  .texto-raposa {
     padding: 15px;
     margin: 20px 10px;
     font-size: 0.95em;
