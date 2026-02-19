@@ -65,15 +65,15 @@ body > * {
   opacity: 0.9;
 }
 
-/* TEXTO PRINCIPAL */
+/* BLOCO PRINCIPAL (CARD) */
 
 .texto-raposa {
   max-width: 700px;
-  padding: 30px;
+  padding: 35px 30px;
   margin: 40px auto;
   text-align: justify;
-  border-radius: 20px;
-  line-height: 1.6;
+  border-radius: 25px;
+  line-height: 1.7;
   font-size: 1.15em;
 
   /* efeito vidro */
@@ -85,11 +85,20 @@ body > * {
   animation: fadeIn 1.2s ease;
 }
 
-.texto-raposa h2 {
+/* TÍTULO DENTRO DO CARD */
+
+.texto-raposa h1 {
   text-align: center;
-  color: #ffffff;
+  font-size: 2.1em;
   margin-bottom: 20px;
 }
+
+.texto-raposa h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
 
 /* ÁUDIO */
 
