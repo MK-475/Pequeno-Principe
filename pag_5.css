@@ -120,12 +120,12 @@ audio {
 /* RESPONSIVO */
 
 @media (max-width: 768px) {
-  .meio_2 img {
+  .center img {
     width: 100px;
     height: 100px;
   }
 
-  .texto-raposa {
+  .texto-rosa {
     padding: 20px;
     margin: 25px 15px;
     font-size: 1em;
@@ -133,12 +133,12 @@ audio {
 }
 
 @media (max-width: 480px) {
-  .meio_2 img {
+  .center img {
     width: 80px;
     height: 80px;
   }
 
-  .texto-raposa {
+  .texto-rosa {
     padding: 15px;
     margin: 20px 10px;
     font-size: 0.95em;
