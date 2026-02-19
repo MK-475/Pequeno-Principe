@@ -59,7 +59,7 @@ body > * {
   line-height: 1.6;
   font-size: 1.15em;
 
-  /* efeito vidro moderno */
+  /* efeito vidro */
   background: rgba(0,0,0,0.35);
   backdrop-filter: blur(6px);
 
@@ -70,7 +70,7 @@ body > * {
 
 .texto-raposa h2 {
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   margin-bottom: 20px;
 }
 
