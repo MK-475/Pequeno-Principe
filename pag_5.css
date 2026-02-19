@@ -24,7 +24,7 @@ body::before {
   background-image: url("imag/background_preto.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 0.5;
+  opacity: 0.35;
   z-index: 0;
 }
 
@@ -45,10 +45,27 @@ body > * {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 3px solid rgba(255,255,255,0.7);
 }
 
-/* BLOCO DE TEXTO */
+/* TÍTULO E CITAÇÃO */
+
+.rosa {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.rosa h1 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.citacao {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* TEXTO PRINCIPAL */
 
 .texto-raposa {
   max-width: 700px;
@@ -81,7 +98,7 @@ audio {
   margin: 25px auto 40px;
 }
 
-/* ANIMAÇÃO SUAVE */
+/* ANIMAÇÃO */
 
 @keyframes fadeIn {
   from {
@@ -102,7 +119,7 @@ audio {
     height: 100px;
   }
 
-  .texto-gnominho {
+  .texto-raposa {
     padding: 20px;
     margin: 25px 15px;
     font-size: 1em;
@@ -115,7 +132,7 @@ audio {
     height: 80px;
   }
 
-  .texto-gnominho {
+  .texto-raposa {
     padding: 15px;
     margin: 20px 10px;
     font-size: 0.95em;
