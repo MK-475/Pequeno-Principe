@@ -10,7 +10,7 @@
   <div class="container">
 
     <!-- Navegação -->
-    <nav>
+    <nav aria-label="Navegação principal">
       <ul>
         <li><b><a href="pag_2.html">Rosa</a></b></li>
         <li><b><a href="pag_3.html">Raposa</a></b></li>
@@ -28,7 +28,7 @@
 
       <div class="conteudo-centralizado">
         <h1 class="title">Pequeno Príncipe</h1>
-        <p><big><i><b>E foi então que apareceu a Raposa</b></i></big></p>
+        <p class="subtitulo"><em><strong>E foi então que apareceu a Raposa</strong></em></p>
         <div class="heart-decoration">🦊</div>
       </div>
     </header>
@@ -50,10 +50,10 @@
   </div>
   
   <!-- Música de fundo -->
- 
- <div class="audio-container">
-    <button id="playPauseBtn">▶️ Tocar</button>
-    <audio id="audio" src="audio/joao-e-maria.mp3"></audio>
+
+  <div class="audio-container">
+    <button id="playPauseBtn" type="button" aria-pressed="false">▶️ Tocar música</button>
+    <audio id="audio" src="audio/joao-e-maria.mp3" preload="none"></audio>
   </div>
 
   <script src="pag_1.js"></script>

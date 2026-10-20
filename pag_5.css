@@ -1,125 +1,83 @@
-/* RESET BASE */
+/* =====================================================
+   PÁGINA ROSA E RAPOSA
+   ===================================================== */
+*, *::before, *::after { box-sizing: border-box; }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
+html { min-height: 100%; }
 
 body {
-  color: white;
-  font-family: 'Times New Roman', Times, serif;
-  background-image: url("imag/imag_8.jpeg");
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  isolation: isolate;
   min-height: 100vh;
+  margin: 0;
+  padding: 0 20px 28px;
   overflow-x: hidden;
+  color: #fff;
+  font-family: "Times New Roman", Times, serif;
+  background: #17130f url("imag/imag_8.jpeg") center / cover fixed no-repeat;
 }
 
-/* camada escura sobre o fundo */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url("imag/background_preto.jpg");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.35;
-  z-index: 0;
+  z-index: -1;
+  background: url("imag/background_preto.jpg") center / cover no-repeat;
+  opacity: 0.42;
+  pointer-events: none;
 }
 
-/* garante conteúdo acima do overlay */
-body > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* IMAGEM */
-
-.meio_2 {
-  text-align: center;
-  margin-top: 25px;
-}
+.meio_2 { margin: 25px auto 0; text-align: center; }
 
 .meio_2 img {
-  width: 150px;
-  height: 150px;
+  display: inline-block;
+  width: clamp(100px, 17vw, 155px);
+  aspect-ratio: 1;
+  height: auto;
+  object-fit: cover;
+  border: 3px solid rgb(255 255 255 / 80%);
   border-radius: 50%;
-  border: 3px solid rgba(255,255,255,0.7);
+  box-shadow: 0 8px 28px rgb(0 0 0 / 30%);
 }
 
-/* BLOCO PRINCIPAL (CARD) */
-
-.texto-raposa{
-  max-width: 700px;
-  padding: 30px;
-  margin: 40px auto;
+.texto-raposa {
+  width: 100%;
+  max-width: 760px;
+  margin: 34px auto;
+  padding: clamp(20px, 4vw, 34px);
   text-align: justify;
+  overflow-wrap: break-word;
+  line-height: 1.75;
+  font-size: clamp(1rem, 1.7vw, 1.12rem);
+  background: rgb(0 0 0 / 38%);
+  border: 1px solid rgb(255 255 255 / 18%);
   border-radius: 20px;
-  line-height: 1.6;
-  font-size: 1.15em;
-
-  /* efeito vidro */
-  background: rgba(0,0,0,0.35);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 22%);
   backdrop-filter: blur(6px);
-
-  box-shadow: 0 0 18px rgba(255,255,255,0.25);
-
-  animation: fadeIn 1.2s ease;
+  animation: fadeIn 800ms ease both;
 }
 
-/* TÍTULO DENTRO DO CARD */
+.texto-raposa h2 { margin: 0 0 20px; text-align: center; }
+.texto-raposa p { margin: 0 0 1.15em; }
+.texto-raposa p:last-child { margin-bottom: 0; }
 
-.texto-raposa h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-
-/* ÁUDIO */
-
-audio {
+.audio-player {
   display: block;
-  margin: 25px auto 40px;
+  width: min(100%, 360px);
+  margin: 24px auto 0;
 }
-
-/* ANIMAÇÃO */
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* RESPONSIVO */
-
-@media (max-width: 768px) {
-  .center img {
-    width: 100px;
-    height: 100px;
-  }
-
-  .texto-rosa {
-    padding: 20px;
-    margin: 25px 15px;
-    font-size: 1em;
-  }
+@media (max-width: 600px) {
+  body { padding: 0 14px 24px; background-attachment: scroll; }
+  .meio_2 { margin-top: 18px; }
+  .texto-raposa { margin: 24px auto; border-radius: 16px; }
 }
 
-@media (max-width: 480px) {
-  .center img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .texto-rosa {
-    padding: 15px;
-    margin: 20px 10px;
-    font-size: 0.95em;
-  }
+@media (prefers-reduced-motion: reduce) {
+  .texto-raposa { animation: none; }
 }
